@@ -1,0 +1,20 @@
+# Core data pipeline
+Pillow>=10.0
+numpy>=1.24
+tokenizers>=0.19
+tqdm>=4.60
+
+# Training / vision encoder (install a CUDA build on the 4×3090 host)
+torch>=2.1
+transformers>=4.45
+safetensors>=0.4
+
+# Optional video and experiment tooling
+opencv-python>=4.8
+pyyaml>=6.0
+
+
+# Audio math QA (voice question span): wav I/O for the whisper precompute
+# pipeline (data/precompute_audio_features.py). TTS itself is isolated in the
+# omni-tts env — see requirements-tts.txt.
+soundfile>=0.12

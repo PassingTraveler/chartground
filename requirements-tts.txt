@@ -1,0 +1,15 @@
+# TTS data generation env (conda env `omni-tts`). MUST stay isolated from the
+# omni training env: chattts 0.2.5 crashes on transformers>=4.48
+# ('DynamicCache' object has no attribute 'layers') so pin 4.46.3, and torch
+# must be a cu121-series build (cu130 requires a CUDA 13 driver; the 3090 host
+# runs driver 12.9 / "found version 12090").
+#
+#   conda create -n omni-tts python=3.11
+#   conda activate omni-tts
+#   pip install -r requirements-tts.txt
+#   pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+#
+chattts==0.2.5
+transformers==4.46.3
+numpy<2.0
+soundfile>=0.12

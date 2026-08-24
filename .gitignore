@@ -1,0 +1,58 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.claude/
+.idea/
+.vscode/
+.env
+.env.*
+
+# Experiment outputs and generated datasets
+out/
+data/generated/
+data/server/
+data/processed/
+data/raw/
+demo/out/
+*.log
+
+# Downloaded checkpoints and feature caches
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+*.npy
+*.npz
+*.wav
+*.mp3
+*.flac
+
+# Downloaded images and archives
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Project-one copied training assets are not source code
+assets/project1/data/
+assets/project1/out/
+
+# External encoder directories are downloaded separately from their model hubs
+model/siglip2-base-patch16-256/
+model/whisper-small/
+
+# Keep small, hand-written examples and documentation trackable
+!data/examples/
+!data/examples/**
+!docs/
+!docs/**
